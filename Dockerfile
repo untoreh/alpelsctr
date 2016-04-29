@@ -12,7 +12,7 @@ RUN \
  && rm els.zip 
 
 
-VOLUME ["/srv/els/config","/srv/els/data","/srv/els/plugins","/srv/els/logs"]
+#VOLUME ["/srv/els/config","/srv/els/data","/srv/els/plugins","/srv/els/logs"]
 
 RUN gosu nobody true \
  && chmod +s /usr/local/bin/gosu \
