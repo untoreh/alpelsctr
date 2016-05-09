@@ -1,7 +1,7 @@
 services:
 - docker
 script:
-- export SAVE=$PWD cnt="alpeslctr" slim=""
+- export SAVE=$PWD cnt="alpelsctr" slim=""
 - docker build -t ${cnt} .
 before_deploy:
 - cd
