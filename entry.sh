@@ -13,10 +13,7 @@ if [ "$1" = '/els/bin/elasticsearch' -a "$(id -u)" = '0' ]; then
 	# Change the ownership of /usr/share/elasticsearch/data to elasticsearch
 	chown -R elasticsearch:elasticsearch /els
 	
-	ln -s /els/vol/data /els/data
-	ln -s /els/vol/config /els/config
-	ln -s /els/vol/plugins /els/plugins
-	ln -s /els/vol/logs /els/logs
+	ln -s /els/vol/* /els
 	
 	set -- gosu elasticsearch "$@"
 	#exec gosu elasticsearch "$BASH_SOURCE" "$@"
