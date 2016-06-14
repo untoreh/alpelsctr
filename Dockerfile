@@ -9,7 +9,7 @@ RUN \
  && wget https://download.elastic.co/elasticsearch/release/org/elasticsearch/distribution/zip/elasticsearch/${ELSv}/elasticsearch-${ELSv}.zip -O els.zip \
  && unzip els.zip \
  && mv elasticsearch-${ELSv} /els \
- && rm /els/config /els/data /els/logs /els/modules /els/plugins
+ && rm /els/config /els/data /els/logs /els/modules /els/plugins \
  && rm els.zip 
 
 
