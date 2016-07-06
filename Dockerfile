@@ -1,7 +1,7 @@
 FROM java:jre-alpine
 #
 RUN \
- apk --update --no-cache upgrade && apk add curl wget \
+ apk --update --no-cache upgrade && apk add curl wget bash \
  && cd /tmp \
  && wget `curl -s https://api.github.com/repos/tianon/gosu/releases | grep browser_download_url | grep amd64 | head -n 1 | cut -d '"' -f 4` -O /usr/local/bin/gosu \
  && chmod +x /usr/local/bin/gosu \
