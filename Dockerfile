@@ -6,7 +6,7 @@ RUN \
  && wget `curl -s https://api.github.com/repos/tianon/gosu/releases | grep browser_download_url | grep amd64 | head -n 1 | cut -d '"' -f 4` -O /usr/local/bin/gosu \
  && chmod +x /usr/local/bin/gosu \
  && ELSv=`curl -s https://api.github.com/repos/elastic/elasticsearch/tags | grep zipball_url | grep -v "-" | head -n 1 | cut -d '/' -f 8 | grep -ohE [0-9]+\.[0-9]+\.[0-9]+` \
- && wget https://download.elastic.co/elasticsearch/release/org/elasticsearch/distribution/zip/elasticsearch/${ELSv}/elasticsearch-${ELSv}.zip -O els.zip \
+ && wget https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-${ELSv}.zip -O els.zip \
  && unzip els.zip \
  && mv elasticsearch-${ELSv} /els \
  && rm -rf /els/config /els/data /els/logs /els/modules /els/plugins \
